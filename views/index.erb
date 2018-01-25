@@ -1,103 +1,87 @@
-<!DOCTYPE html>
-<style>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-ul.items li {
-    padding-right: 10%;
-    width: auto;
-    margin-right: 0.5%;
-    display: inline-block;
-    vertical-align: center;
-    padding-left: 0;
-    margin-left: 0;
-    *display: inline;
-    *zoom: 1;
-}
+    <title>Quickie Mart</title>
 
-</style>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-<header> <center><img src="https://gator4234.hostgator.com:2083/cpsess7333725500/viewer/home4%2fcmazey96%2fclemdog.com%2fviewer/book_finder%20header-02-01.png" style="max-width:100%;height:auto;"></center> </header>
+    <!-- Custom styles for this template -->
+    <link href="pricing.css" rel="stylesheet">
+  </head>
 
-<body style="background-color:#ffe1a8;">
-<center>
-<div class="col-md-1"></div>
+  <body>
 
 
-<div class="form-group">
-    <div class="col-md-4">
-        <form method="post" action="item_choice">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Welcome to Quickie Mart!</h1>
+      <p class="lead">Please select the items you wish to purchase:</p>
+    </div>
 
-<ul class="items">
-    
-    <li>
+    <div class="form-group">
+<form method="post" action="item_choice">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Chips</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$1.50 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <img src="/img/chips-01.png">
+              <li>Chips</li>
+
+            </ul><br>
+            <input type="hidden" name="chips" value="f" id="chips">
+            <input type="checkbox" name="chips" value="t" id="chips" cclass="btn btn-lg btn-block btn-primary" value="Add to Cart">
+            
+          </div>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Candy</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$2.00 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <img src="/img/candy-01.png">
+              <li>Candy</li>
+            </ul><br>
+            <input type="hidden" name="candy" value="f">
+            <input type="checkbox" name="candy" value="t">
+            
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Gum</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$1.00 <small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <img src="/img/gum-01.png">
+              <li>Gum</li>
+            </ul><br>
+            <input type="hidden" name="gum" value="f">
+            <input type="checkbox" name="gum" value="t">
+          </div>
+        </div>
+
+<input type="submit" class="btn btn-primary btn-lg btn-block" value="Add to Cart">
         
-            <img src="img//wsj-01.png">
-            <h4>Newspaper</h4>
-            <p>$1.50</p>
-       
-       <input type="radio" name="item_name" value="newspaper">
-        <br><br>
-    </li>
 
-    <li>
-        
-            <img src="img//powerball-01.png">
-            <h4>Powerball</h4>
-            <p>$4.00</p>
-        <input type="radio" name="item_name" value="lotto">
-        <br><br>
+      </div>
 
-    </li> 
+  </div>
 
-    <li>   
-            <img src="img//chips-01.png">
-            <h4>Chips</h4>
-            <p>$1.50</p>
-        <input type="radio" name="item_name" value="chips">
-        <br> <br>
-       
-    </li>
-
-<br>
-<br>
-<br>
-
-    <li>
-        
-            <img src="img//candy-01.png">
-            <h4>Candy</h4>
-            <p>$2.00</p>
-        <input type="radio" name="item_name" value="candy">
-        <br> <br>
-
-    </li>
-    
-
-
-    <li>
-        
-            <img src="img//coke-01.png">
-            <h4>Coke</h4>
-            <p>$1.25</p>
-               <input type="radio" name="item_name" value="soda">
-        <br><br>
-
-    </li>
-
-    <li>
-        
-            <img src="img//gum-01.png">
-            <h4>Gum</h4>
-            <p>$1.00</p>
-        <input type="radio" name="item_name" value="gum">
-        <br>
-       
-    </li>
-</ul>
-
-</div>
-
-<input type="submit" value="Order Now" class="btn btn-warning">
 </form>
-</center>
-</body>
+
+  </body>
 </html>

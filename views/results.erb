@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Quickie Mart Cart</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+
+<%
+   total = 0
+    if chips == "t"
+      total = total + item_name("chips")
+    end
+    if candy == "t"
+      total = total + item_name("candy")
+    end
+    if gum == "t"
+      total = total + item_name("gum")
+    end
+%>
+    
+    <div>Subtotal<br>
+      $<%= stotal.round(2) %></div>
+
+    <div>State Tax:<br>
+      $<%= (stotal * 0.06).round(2).to_f %></div>
+
+    <div>Total:<br>
+      <% stotal = stotal.round(2) total = stotal.round(2) + (stotal * 0.06).round(2).to_f %>
+      $<%= stotal.round(2) + (stotal * 0.06).round(2).to_f %></div>
+
+<form method="post" action="collection">
+  <input type="integer" name="payment">
+  <input type="hidden" name="chips" value = <%= chips %>>
+  <input type="hidden" name="candy" value = <%= candy %>>
+  <input type="hidden" name="gum" value = <%= gum %>>
+<input type="hidden" name="stotal" value = <%= stotal %>>
+<input type="hidden" name="total" value = <%= total %>>
+<br>
+Put in payment
+<br>
+<br>
+<input type="submit" value="Check Out">
+</form>
+
+</div>
+</div>
+</div>
+</body>
+</html>

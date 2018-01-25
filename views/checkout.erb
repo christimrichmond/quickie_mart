@@ -1,22 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
 
-<header> <center><img src="https://gator4234.hostgator.com:2083/cpsess7333725500/viewer/home4%2fcmazey96%2fclemdog.com%2fviewer/book_finder%20header-02-01.png" style="max-width:100%;height:auto;"></center> </header>
+    <title>Quickie Mart Checkout</title>
 
-<body style="background-color:#ffe1a8;">
-<center>
-<div class="col-md-1"></div>
-<br>
-<h3>Your total is:</h3>
-<br> 
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
 
+  <body class="bg-light">
 
-
-<br>
-
-
-<br><br>
+<div>Your Total is:<br>
+	$<%= total %>
 </div>
-
-</center>
-  </body>
+<div>You gave me:<br>
+	$<%= payment %>
+</div>
+<div>Your Change is:<br>
+<%
+change = payment.to_f - total.to_f
+%>
+	$<%= change.round(2) %>
+</div> 
+</body>
 </html>
